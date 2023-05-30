@@ -9,7 +9,7 @@ var fetchuser = require('../middleware/fetchuser');
 const JWT_SECRET = 'Harryisagoodb$oy';
 
 // ROUTE 1: Create a User using: POST "/api/auth/createuser". No login required
-router.post('/createuser', [
+router.post('/signup', [
   body('name', 'Enter a valid name').isLength({ min: 3 }),
   body('email', 'Enter a valid email').isEmail(),
   body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
